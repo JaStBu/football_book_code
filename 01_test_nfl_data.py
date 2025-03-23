@@ -26,6 +26,10 @@ pbp_py_p = (
     .agg({"air_yards": ["count", "mean", "min", "max"]})
 )
 
+# further inout: https://www.analyticsvidhya.com/blog/2020/03/groupby-pandas-aggregating-data-python/
+# and: https://stackoverflow.com/questions/53943319/what-are-all-pandas-agg-functions
+# and: https://pandas.pydata.org/pandas-docs/stable/reference/groupby.html#dataframegroupby-computations-descriptive-stats
+
 ## format and print data for passing plays
 pbp_py_p.columns = list(map("_".join, pbp_py_p.columns.values))
 sort_crit = "air_yards_count > 100"
